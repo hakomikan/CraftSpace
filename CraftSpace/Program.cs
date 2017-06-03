@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SharpDX.Windows;
 
 namespace CraftSpace
 {
@@ -14,9 +15,17 @@ namespace CraftSpace
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            var form = new RenderForm("Test")
+            {
+                Width = 1280,
+                Height = 800
+            };
+            form.Show();
+
+            using (var app = new TestApp())
+            {
+                app.Ini
+            }
         }
     }
 }

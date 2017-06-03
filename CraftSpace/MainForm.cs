@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SharpDX.Windows;
 
 namespace CraftSpace
 {
-    public partial class Form1 : Form
+    public partial class MainForm : RenderForm
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
